@@ -4,6 +4,8 @@
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
     text-align: center;
+    box-sizing: border-box;
+    padding: 0px 15px;
 }
 
 .Edit {

@@ -16,7 +16,7 @@ class Blog extends Component {
     componentDidMount() {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(response => {
-                console.log(response.data);
+                //console.log(response.data);
                 // get only the first 6 posts and store them in posts constant
                 const posts = response.data.slice(0,6);
                 const updatedPosts = posts.map(post => {
