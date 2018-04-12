@@ -12,7 +12,7 @@ class FullPost extends Component {
         if(this.props.id) {
             // if we don't have a loaded post, or if we do have it but if it has a different id than the id that we want to load, make a request
             if(!this.state.loadedPost || (this.state.loadedPost.id !== this.props.id)) {
-                axios.get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
+                axios.get('/posts/' + this.props.id)
                 .then(response => {
                     console.log(response.data);
                     this.setState({ loadedPost: response.data })
@@ -23,7 +23,7 @@ class FullPost extends Component {
     }
 
     deletePostHandler = () => {
-        axios.delete('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
+        axios.delete('/posts/' + this.props.id)
             .then(response  => {
                 console.log(response);
             });
