@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 // import axios from 'axios';
 
 import './Blog.css';
@@ -13,8 +13,8 @@ class Blog extends Component {
                 <header>
                     <nav>
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/new-post">New Post</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/new-post">New Post</Link></li>
                         </ul>
                     </nav>
                 </header>
