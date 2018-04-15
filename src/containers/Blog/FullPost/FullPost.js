@@ -8,11 +8,12 @@ class FullPost extends Component {
         loadedPost: null
     }
 
-    componentDidUpdate() {
-        if(this.props.id) {
+    componentDidMount() {
+        console.log(this.props.match.params.id)
+        if(this.props.match.params.id) {
             // if we don't have a loaded post, or if we do have it but if it has a different id than the id that we want to load, make a request
             if(!this.state.loadedPost || (this.state.loadedPost.id !== this.props.id)) {
-                axios.get('/posts/' + this.props.id)
+                axios.get('/posts/' + this.props.match.params.id)
                 .then(response => {
                     console.log(response.data);
                     this.setState({ loadedPost: response.data })
